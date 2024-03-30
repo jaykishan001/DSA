@@ -2,10 +2,10 @@
 using namespace std;
 
 void PrintFromNto1(int n, int i) {
-    if(n==i) return ;
+    if(i<1) return ;
 
-    cout<<n<<" ";
-    PrintFromNto1(n-1, i);
+    cout<<i<<" ";
+    PrintFromNto1(n, i-1);
 }
 
 
@@ -13,6 +13,6 @@ int main() {
     int n;
     cin>>n;
     
-    PrintFromNto1(n, 0);
+    PrintFromNto1(n, n);
 
 }
